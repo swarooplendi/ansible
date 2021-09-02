@@ -3,7 +3,7 @@
    hosts: localhost
    gather_facts: false
    tasks:
-     - include_vars: /home/swaroop/odd.yml
+     - include_vars: /odd.yml
              
      - name: Echo the value
        command: echo "{{ item }}"
