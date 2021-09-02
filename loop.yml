@@ -1,0 +1,19 @@
+---
+ - name: Working with loop module
+   hosts: localhost
+   gather_facts: false
+   tasks:
+     - include_vars: /home/swaroop/odd.yml
+             
+     - name: Echo the value
+       command: echo "{{ item }}"
+       when: i == "odd"
+       loop: "{{ odd }}"
+    
+     - name: even
+       command: echo "{{ item }}"     
+       when: i == "even"
+       loop: "{{ even }}"
+          
+         
+         
