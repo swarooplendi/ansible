@@ -4,7 +4,11 @@
    gather_facts: false
    tasks:
      - include_vars: odd.yml
-             
+  
+     - name: echo
+       debug: 
+        msg: "{{ i }}" 
+
      - name: Echo the value
        command: echo "{{ item }}"
        when: i == "odd"
